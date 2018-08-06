@@ -111,20 +111,20 @@ $(document).ready(function() {
     draggable: true,
     arrows: false,
     autplay: true,
-    autoplaySpeed: 2000
-    // responsive: [{
-    //   breakpoint: 640,
-    //   settings: {
-    //     slidesToShow: 2,
-    //     slidesToScroll: 1,
-    //     infinite: true,
-    //     dots: false,
-    //     arrows: false,
-    //     autoplay: true,
-    //     centerMode: true,
-    //     focusOnSelect: true
-    //   }
-    // }]
+    autoplaySpeed: 2000,
+    responsive: [{
+      breakpoint: 640,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: false,
+        dots: false,
+        arrows: false,
+        autoplay: false,
+        centerMode: true,
+        focusOnSelect: true
+      }
+    }]
   });
 
   $('.team_arrow_left').click(function(){
@@ -135,5 +135,21 @@ $(document).ready(function() {
     $('.team_items').slick('slickNext');
   });
 
+  var menu = $('.mobile__menu');
+
+  $('.mobile__burger').click(function() {
+
+    menu.css({
+      'left':'0'
+    })
+  });
+
+  $('.mob__menu-close').click(function() {
+
+    menu.css({
+      'left':'-100%'
+    })
+
+  });
 
 });
