@@ -2082,7 +2082,7 @@ body.white h2 {
   font-weight: 700
 }
 
-body>.bg__cont {
+main>.bg__cont {
   position: absolute;
   top: -25rem;
   left: 50%;
@@ -2354,6 +2354,15 @@ body.white .contact_sales>h2 {
     width: 160px;
     height: 33.5px;
   }
+  .sun {
+    max-width: 100%;
+    left: 50%;
+    margin-left: 0;
+    transform: translateX(-50%);
+  }
+  main {
+    overflow: hidden;
+  }
   .first .main_text {
     padding: 172px 0 0 0;
     font-size: 22px;
@@ -2582,6 +2591,10 @@ body.white .contact_sales>h2 {
     opacity: .5;
     background-size: cover;
     left: auto;
+  }
+
+  .team_arrow {
+    display: none;
   }
 
   .clients .wave_grid {
