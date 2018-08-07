@@ -288,7 +288,18 @@ footer .wrapper .footerRow {
   margin-left: -15px;
   margin-right: -15px;
   -ms-flex-pack: distribute;
-  justify-content: space-around
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 1170px) {
+  footer .wrapper .footerRow {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  footer .wrapper .footerRow .contact_sale_block a.btn {
+    max-width: 100%;
+  }
 }
 
 footer .wrapper .footerRow dl {
@@ -517,11 +528,11 @@ footer .wrapper .footerRow .copyrights small {
   transition: .4s;
 }
 
-.team_item_hover .team_item__img img {
+.team_item:hover .team_item__img img {
   filter: grayscale(0);
 }
 
-.team_item_hover .team_item__img:after {
+.team_item:hover .team_item__img:after {
   opacity: 0;
 }
 
@@ -662,7 +673,8 @@ footer .wrapper .footerRow .copyrights small {
   height: 30px;
   padding-top: 20px;
   cursor: pointer;
-  font-size: 16px
+  font-size: 16px;
+  background-size: cover;
 }
 
 .dev_first .tabs_container_langs ul.tabs_menu_langs li:last-child {
@@ -674,6 +686,7 @@ footer .wrapper .footerRow .copyrights small {
   border-radius: 7px;
   border-right: none;
   background: url(../img/elems/btn_prlang_active.png) top left no-repeat;
+  background-size: cover;
   box-shadow: 0 19px 31px 0 rgba(0, 0, 0, .1)
 }
 
@@ -1350,7 +1363,24 @@ footer .wrapper .footerRow .copyrights small {
   left: 0;
   top: -73%;
   z-index: -1;
-  opacity: .5
+  opacity: .5;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: auto;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .solutions .bg_circle {
+    top: -60%;
+    max-width: inherit;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .solutions .bg_circle {
+    top: -40%;
+  }
 }
 
 .solutions .solutions_list {
@@ -1523,7 +1553,7 @@ footer .wrapper .footerRow .copyrights small {
   word-wrap: break-word;
   margin-left: 15px;
   margin-right: 15px;
-  width: calc(16.666666666666668% - 30px);
+  width: calc(20% - 30px);
   margin-bottom: 50px
 }
 
@@ -1564,7 +1594,7 @@ footer .wrapper .footerRow .copyrights small {
   font-size: 19px
 }
 
-/* .lets_talk .bg_lets_talk {
+.lets_talk .bg_lets_talk {
   background: url(../img/bg/circles.png) top left no-repeat;
   position: absolute;
   width: 1118px;
@@ -1574,8 +1604,8 @@ footer .wrapper .footerRow .copyrights small {
   margin-top: -544px;
   left: 50%;
   margin-left: -559px;
-  opacity: .3
-} */
+  opacity: .3;
+}
 
 .lets_talk .bg_particles {
   background: url(../img/bg/particles.png) center 0 no-repeat fixed;
@@ -2040,7 +2070,7 @@ body.white main {
 main {
   width: 100%;
   position: relative;
-  z-index: 1
+  z-index: 1;
 }
 
 .btn {
@@ -2224,6 +2254,16 @@ main>.bg__cont {
   display: none;
 }
 
+
+.sun__bg {
+  position: absolute;
+  width: 100%;
+  max-width: 1100px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: .3;
+}
+
 @media screen and (max-width:1200px) {
   .wwd .wwd_container .wwd_r_col .circle_di ul .lev_3 dl dt {
     font-size: 13px;
@@ -2285,6 +2325,9 @@ body.white .contact_sales>h2 {
   }
   header {
     padding-top: 20px;
+  }
+  main {
+    overflow: hidden;
   }
   header .container {
     padding-bottom: 10.5px;
@@ -2360,21 +2403,6 @@ body.white .contact_sales>h2 {
     margin-left: 0;
     transform: translateX(-50%);
   }
-  .sun:after {
-    content: '';
-    background: url(../img/bg/circles-top.svg);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    padding-bottom: 98%;
-  }
-  main {
-    overflow: hidden;
-  }
 
   .solutions .line_spec p {
     margin-bottom: 40px;
@@ -2397,12 +2425,27 @@ body.white .contact_sales>h2 {
   display: none;
 }
 
+.sun__bg-desktop {
+  display: block;
+}
+
+.sun__bg-mobile {
+  display: none;
+}
+
 @media screen and (max-width: 40em) {
   .first .main_text {
     padding: 172px 0 0 0;
     font-size: 22px;
     line-height: 1.41;
     font-weight: 500;
+    width: 100%;
+  }
+  .sun__bg-desktop {
+    display: none;
+  }
+  .sun__bg-mobile {
+    display: block;
     width: 100%;
   }
   .first .text {
@@ -2664,6 +2707,7 @@ body.white .contact_sales>h2 {
     padding-bottom: 196%;
   }
 }
+
 
 @media screen and (min-width: 350px) {
   .bg_lets_talk {

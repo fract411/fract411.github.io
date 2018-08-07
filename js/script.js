@@ -3,22 +3,6 @@ $(document).ready(function() {
   var winheight = $(window).height();
   $('.first').css('height', winheight + 'px');
 
-  //$('.contact_sales').css('min-height',winheight+'px');
-
-  $('.team_item').mouseover(function() {
-    $(this).addClass('team_item_hover');
-  });
-  $('.team_item').mouseout(function() {
-    $(this).removeClass('team_item_hover');
-  });
-  $('.mob_btn').click(function() {
-    if ($('header').hasClass('opened_menu')) {
-      $('header').removeClass('opened_menu')
-    } else {
-      $('header').addClass('opened_menu')
-    }
-  });
-
   $('.tabs_container  .tabs_menu  li').click(function() {
 
     var tabcontainer_name = $(this).data('tabcontainer');
