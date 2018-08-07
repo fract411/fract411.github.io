@@ -2276,7 +2276,7 @@ body.white .contact_sales>h2 {
   display: none;
 }
 
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 64em) {
   header nav {
     display: none;
   }
@@ -2375,6 +2375,29 @@ body.white .contact_sales>h2 {
   main {
     overflow: hidden;
   }
+
+  .solutions .line_spec p {
+    margin-bottom: 40px;
+  }
+
+  .dev_first .tabs_container_for_code ul.tabs_menu_for_code li {
+    padding: 14px 20px 13px;
+  }
+
+  .team_arrow {
+    display: none;
+  }
+
+  .team_item.slick-slide {
+    margin: 0 15px;
+  }
+}
+
+.tabs_menu_langs_container_mobile {
+  display: none;
+}
+
+@media screen and (max-width: 40em) {
   .first .main_text {
     padding: 172px 0 0 0;
     font-size: 22px;
@@ -2490,6 +2513,10 @@ body.white .contact_sales>h2 {
     padding: 10px 17.3px;
     margin-right: 0;
     font-size: 12px;
+  }
+
+  .tabs_menu_langs_container_mobile {
+    display: block;
   }
   .dev_first .tabs_container_for_code ul.tabs_menu_for_code li i.n_act,
   .dev_first .tabs_container_for_code ul.tabs_menu_for_code li.selected i.act,
