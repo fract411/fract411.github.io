@@ -2360,6 +2360,18 @@ body.white .contact_sales>h2 {
     margin-left: 0;
     transform: translateX(-50%);
   }
+  .sun:after {
+    content: '';
+    background: url(../img/bg/circles-top.svg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding-bottom: 98%;
+  }
   main {
     overflow: hidden;
   }
@@ -2599,7 +2611,6 @@ body.white .contact_sales>h2 {
 
   .clients .wave_grid {
     background: url(../img/bg/wave-grid.png) top left no-repeat;
-        background-size: auto auto;
     width: 100%;
     background-size: cover;
     padding-top: 511%;
@@ -2607,7 +2618,56 @@ body.white .contact_sales>h2 {
     bottom: -50%;
     z-index: -1;
   }
+
+  main > .bg__cont {
+    display: none;
+  }
+
+  .lets_talk_container .bg__cont {
+    display: none;
+  }
+
+  .bg_lets_talk {
+    background: url(../img/bg/circles-btn.svg) center center no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -110%;
+    padding-bottom: 196%;
+  }
 }
+
+@media screen and (min-width: 350px) {
+  .bg_lets_talk {
+    top: -128%;
+  }
+}
+
+@media screen and (min-width: 370px) {
+  .bg_lets_talk {
+    top: -139%;
+  }
+}
+
+@media screen and (min-width: 390px) {
+  .bg_lets_talk {
+    top: -149%;
+  }
+}
+
+@media screen and (min-width: 410px) {
+  .bg_lets_talk {
+    top: -169%;
+  }
+}
+
+@media screen and (min-width: 420px) {
+  .bg_lets_talk {
+    top: -189%;
+  }
+}
+
 
 @media screen and (min-height: 666px) and (max-width: 40em) {
   #mouse-scroll {
